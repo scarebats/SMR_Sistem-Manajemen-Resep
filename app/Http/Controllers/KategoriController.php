@@ -2,24 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KategoriModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use App\Models\KategoriModel;
 use Yajra\DataTables\Facades\DataTables;
-
 
 class KategoriController extends Controller
 {
     public function index()
     {
         $breadcrumb = (object) [
-            'title' => 'Daftar Kategori Barang',
+            'title' => 'Daftar Kategori HP',
             'list' => ['Home', 'Kategori']
         ];
 
         $page = (object) [
-            'title' => 'Daftar kategori barang yang terdaftar dalam sistem'
+            'title' => 'Daftar kategori HP yang ada'
         ];
 
         $activeMenu = 'kategori'; // set menu yang sedang aktif
